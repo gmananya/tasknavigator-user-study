@@ -36,38 +36,24 @@
       <!-- Left Panel -->
       <div class="col-md-3 bg-light p-4 border-end overflow-auto">
 
-        <!-- Website Selection -->
-        <div class="section">
-          <div class="section-header">Select website</div>
-          <select id="website-dropdown" class="form-select mb-2">
-            <option value="">Choose...</option>
-            <option value="Wikipedia - Tropical cyclone">Wikipedia - Tropical cyclone</option>
-            <option value="Wikipedia - Photosynthesis">Wikipedia - Photosynthesis</option>
-            <option value="Wikipedia - Ancient Olympic Games">Wikipedia - Ancient Olympic Games</option>
-            <option value="CNN - Stock Market Homepage">CNN - Stock Market Homepage</option>
-            <option value="CNN - Hudson Homepage">CNN - Hudson Homepage</option>
-            <option value="CNN - Coachella Homepage">CNN - Coachella Homepage</option>
-            <option value="HEB - Vanilla Greek Yogurt">HEB - Vanilla Greek Yogurt</option>
-            <option value="HEB - Chocolate Icecream">HEB - Chocolate Icecream</option>
-            <option value="HEB - Brownie Mix">HEB - Brownie Mix</option>
-          </select>
-          <button id="load-website-button" class="btn btn-outline-primary w-100">Load Website</button>
-        </div>
+        
 
         <!-- Task Selection -->
         <div class="section">
           <div class="section-header">Select task</div>
           <select id="task-dropdown" class="form-select mb-3">
             <option value="">Choose...</option>
-            <option value="task1">Types of cyclones</option>
-            <option value="task2">Photosynthesis process</option>
-            <option value="task3">Ancient Olympic training</option>
-            <option value="task4">Stock market and gold</option>
-            <option value="task5">Hudson river crash</option>
-            <option value="task6">Post Malone at Coachella</option>
-            <option value="task7">Cheapest vanilla yogurt</option>
-            <option value="task8">Expensive chocolate ice cream</option>
-            <option value="task9">Brownie mix under $4</option>
+            <option value="task1">How might a cyclone evolve as it moves across a wide range of latitudes?</option>
+            <option value="task2">Which specific membrane within a plant cell contains the proteins responsible for photosynthesis?</option>
+            <option value="task3">What kind of preparations did the athletes undergo to train for the ancient Olympic Games?</option>
+            <option value="task4">Has the stock market improved? How has this impacted gold prices?            </option>
+            <option value="task5">Show me the latest news on the Hudson river crash. How many people were injured?</option>
+            <option value="task6">I’m interested in going to Coachella this year. When is Post Malone’s concert?</option>
+            <option value="task7">I want to buy the cheapest 4 pack low sugar vanilla greek yogurt.            </option>
+            <option value="task8">Find the most expensive chocolate ice-cream option that is 1 pint and is available for curbside pickup.</option>
+            <option value="task9">I want to buy the most expensive brownie mix that is at least 18 oz under $4. </option>
+            <option value="task10">Show me the first asparagus related recipe</option>
+            <option value="task11">Show me the first recommended blog platform on this page</option>
           </select>
         </div>
 
@@ -76,9 +62,9 @@
           <div class="section-header">Rendering style</div>
           <select id="rendering-style-dropdown" class="form-select mb-3">
             <option value="">Choose...</option>
-            <option value="color-gradients">All Info (Color Gradients)</option>
-            <option value="opacity">All Info (Opacity)</option>
-            <option value="task-specific">Only Task-Specific Info</option>
+            <option value="task-specific">Only Task-specific Information</option>
+            <option value="color-gradients">All Information (Color Gradients)</option>
+            <option value="opacity">All Information (Opacity)</option>
           </select>
 
           <div id="threshold-container" class="mb-3 d-none">
@@ -107,6 +93,24 @@
             <button id="task-completed-button" class="btn btn-success d-none">Task Completed</button>
           </div>
         </div>
+
+        <!-- Website Selection -->
+        <div class="section">
+          <div class="section-header">Select website</div>
+          <select id="website-dropdown" class="form-select mb-2">
+            <option value="">Choose...</option>
+            <option value="Wikipedia - Tropical cyclone">Wikipedia - Tropical cyclone</option>
+            <option value="Wikipedia - Photosynthesis">Wikipedia - Photosynthesis</option>
+            <option value="Wikipedia - Ancient Olympic Games">Wikipedia - Ancient Olympic Games</option>
+            <option value="CNN - Stock Market Homepage">CNN - Stock Market Homepage</option>
+            <option value="CNN - Hudson Homepage">CNN - Hudson Homepage</option>
+            <option value="CNN - Coachella Homepage">CNN - Coachella Homepage</option>
+            <option value="HEB - Vanilla Greek Yogurt">HEB - Vanilla Greek Yogurt</option>
+            <option value="HEB - Chocolate Icecream">HEB - Chocolate Icecream</option>
+            <option value="HEB - Brownie Mix">HEB - Brownie Mix</option>
+          </select>
+          <button id="load-website-button" class="btn btn-outline-primary w-100">Load Website</button>
+        </div>
       </div>
 
       <!-- Right Panel -->
@@ -115,6 +119,8 @@
       </div>
     </div>
   </div>
+
+  
 
   <!-- JavaScript -->
   <script>
@@ -140,7 +146,10 @@
       task6: { folder: "Coachella - CNN", base: "Coachella Homepage" },
       task7: { folder: "Vanilla Greek Yogurt - HEB", base: "Vanilla Greek Yogurt" },
       task8: { folder: "Chocolate Icecream - HEB", base: "Chocolate Icecream" },
-      task9: { folder: "Brownie Mix - HEB", base: "Brownie Mix" }
+      task9: { folder: "Brownie Mix - HEB", base: "Brownie Mix" },
+      task10: { folder: "T2 Stefan", base: "Delish videos" },
+      task11: { folder: "T2 Stefan", base: "Blog platform" },
+
     };
 
     renderingDropdown.addEventListener("change", () => {
